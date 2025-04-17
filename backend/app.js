@@ -12,7 +12,9 @@ connectDatabase();
 
 // CORS Setup
 const corsOptions = {
-  origin: [process.env.FRONTEND_URL],
+  origin: [
+    process.env.FRONTEND_URL || "https://kshitijsingh.onrender.com", 
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"], 
   credentials: true,
 };
