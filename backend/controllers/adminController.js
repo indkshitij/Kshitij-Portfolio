@@ -36,8 +36,8 @@ export const adminLogin = async (req, res) => {
 
       res.cookie("token", token, {
         httpOnly: true,
-        secure: false,
-        sameSite: "Lax",
+        sameSite: "None",
+        secure: true,
         maxAge: 2 * 60 * 60 * 1000,
       });
 
@@ -240,7 +240,6 @@ export const deleteMessage = async (req, res) => {
     });
   }
 };
-
 
 // create PROJECT
 export const createProject = async (req, res) => {
